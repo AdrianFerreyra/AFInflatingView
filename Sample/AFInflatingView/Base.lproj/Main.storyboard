@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="AFInflatingView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tom-Hd-MnD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Test" id="vVX-af-uAR"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="AKC-d2-fdT" customClass="AFInflatingView" customModule="AFInflatingView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="600" height="0.0"/>
+                                <color key="backgroundColor" red="0.75218701359999995" green="0.14360731839999999" blue="0.21732316909999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ug-RJ-gke">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <color key="backgroundColor" red="1" green="0.89761743849999998" blue="0.008755744922" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T6-hY-kC2">
+                                <rect key="frame" x="24" y="562" width="65" height="30"/>
+                                <state key="normal" title="Add View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WYw-MO-S1D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvy-ck-oh6">
+                                <rect key="frame" x="499" y="562" width="93" height="30"/>
+                                <state key="normal" title="Remove View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ykT-lc-XhH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3411764706" green="0.23529411759999999" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Gvy-ck-oh6" secondAttribute="trailing" constant="8" id="1qo-cd-lU4"/>
+                            <constraint firstAttribute="trailing" secondItem="Tom-Hd-MnD" secondAttribute="trailing" id="4KD-Y1-XMp"/>
+                            <constraint firstItem="Tom-Hd-MnD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="85V-vG-Ja4"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Gvy-ck-oh6" secondAttribute="bottom" constant="8" id="AcZ-4k-kV0"/>
+                            <constraint firstAttribute="trailing" secondItem="AKC-d2-fdT" secondAttribute="trailing" id="EaA-3i-9Vj"/>
+                            <constraint firstItem="AKC-d2-fdT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="KYG-Lc-Bpv"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="4T6-hY-kC2" secondAttribute="bottom" constant="8" id="L7h-oG-r1O"/>
+                            <constraint firstItem="Tom-Hd-MnD" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="a2T-5R-gQK"/>
+                            <constraint firstAttribute="trailing" secondItem="0ug-RJ-gke" secondAttribute="trailing" id="gF7-h0-aIS"/>
+                            <constraint firstItem="0ug-RJ-gke" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="n9K-g6-3Te"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0ug-RJ-gke" secondAttribute="bottom" id="nWb-b8-tE6"/>
+                            <constraint firstItem="AKC-d2-fdT" firstAttribute="top" secondItem="Tom-Hd-MnD" secondAttribute="bottom" id="rcj-9Y-Udd"/>
+                            <constraint firstItem="4T6-hY-kC2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="ugb-nD-syg"/>
+                            <constraint firstItem="0ug-RJ-gke" firstAttribute="top" secondItem="AKC-d2-fdT" secondAttribute="bottom" id="xKc-sv-bWu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inflatingView" destination="AKC-d2-fdT" id="dns-fh-BYE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
